@@ -12,8 +12,8 @@
 
   &__content {
     @include absCenter;
-    width: 75%;
-    background-color: $color-white;
+    width: 65%;
+    background-color: $color-pink;
     box-shadow: 0 2re 4rem rgba($color-black, 0.2);
     border-radius: 3px;
     display: table;
@@ -58,7 +58,7 @@
 
   &__contact--img {
     display: inline-block;
-    max-width: 60%;
+    max-width: 70%;
     height: auto;
     border-radius: 50%;
     /*  margin: 0 auto; */
@@ -114,8 +114,9 @@
   /* FORM */
   &__form {
     position: absolute;
-    top: 20rem;
-    left: 6.5%;
+    max-width: 100%;
+    top: 16rem;
+    left: 5%;
   }
 
   &__form label {
@@ -134,7 +135,7 @@
     font-family: inherit;
     color: $color-grey-dark-3;
     border: none;
-    background-color: #fdf2e9;
+    background-color: $color-pink;
     border-radius: 9px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
@@ -157,7 +158,8 @@
   &__btn-form {
     display: block;
     margin: 0 auto;
-    margin-top: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
   }
 
   // Open states
@@ -174,7 +176,10 @@
   &__close {
     &:link,
     &:visited {
-      color: $color-grey-dark;
+      background-color: $color-primary-light;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50%;
+      color: $color-green;
       position: absolute;
       top: 2.5rem;
       right: 2.5rem;
@@ -186,7 +191,23 @@
     }
 
     &:hover {
-      color: $color-primary;
+      color: $color-pink;
     }
+  }
+
+  &__tech--icons {
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+  }
+
+  &__tech--icons img {
+    margin-top: 1rem;
+    width: 2.8rem;
+    /*  filter: grayscale(20%); */
   }
 }

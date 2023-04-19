@@ -1,14 +1,13 @@
 .tech__stack {
-margin-left: 5rem;
-position: relative;
-padding: 4rem 8rem 4rem 8rem;
-border-radius: 6px;
+  margin-left: 5rem;
+  position: relative;
+  padding: 4rem 8rem 4rem 8rem;
+  border-radius: 6px;
 
--webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
-
-&-ul {
+  &-ul {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -18,19 +17,11 @@ border-radius: 6px;
   &-ul svg {
     max-height: 6rem;
     width: auto;
-    transition: all .3s;
+    transition: all 0.3s;
   }
 
-   &-ul svg:hover {
+  &-ul svg:hover {
     cursor: pointer;
     transform: translate(-0%, -8%);
   }
-
 }
-
-
-
-
-
-
-

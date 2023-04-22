@@ -1,0 +1,22 @@
+.dots {
+  position: absolute;
+  left: 5.6%;
+  bottom: 10rem;
+  transform: translate(-50%, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__btn {
+    height: 12px;
+    width: 12px;
+    background-color: $color-pink;
+    border: 2px solid $color-green;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__btn--fill {
+    background-color: $color-green;
+  }
+}

@@ -817,6 +817,24 @@ body {
   95.96% {
     transform: translate3d(0, -25%, 0); } }
 
+.dots {
+  position: absolute;
+  left: 5.6%;
+  bottom: 10rem;
+  transform: translate(-50%, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px; }
+  .dots__btn {
+    height: 12px;
+    width: 12px;
+    background-color: #faf4ee;
+    border: 2px solid #64ffda;
+    border-radius: 50%;
+    cursor: pointer; }
+  .dots__btn--fill {
+    background-color: #64ffda; }
+
 .row-card {
   display: grid;
   max-width: 114rem;
@@ -868,7 +886,7 @@ body {
     left: 0; }
   .header__font-box {
     position: absolute;
-    top: 24rem;
+    top: 18rem;
     left: -9rem; }
   .header__font {
     display: block;

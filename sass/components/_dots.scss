@@ -1,11 +1,13 @@
 .dots {
+  // position: fixed;
   position: absolute;
-  left: 5.6%;
-  bottom: 10rem;
-  transform: translate(-50%, 32px);
+  top: 22rem;
+  right: 8.5rem;
+  //transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   gap: 12px;
+  //z-index: 2000;
 
   &__btn {
     height: 12px;

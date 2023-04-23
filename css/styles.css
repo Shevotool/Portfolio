@@ -925,7 +925,7 @@ body {
   display: none; }
 
 .navigation__button {
-  background: #112240;
+  background-color: #112240;
   /*  background-color: $color-white; */
   height: 7rem;
   width: 7rem;
@@ -951,11 +951,11 @@ body {
   transform: scale(1.2); }
 
 .navigation__background {
-  height: 4rem;
+  height: 6rem;
   width: 6rem;
   border-radius: 50%;
   position: fixed;
-  top: 6.5rem;
+  top: 4rem;
   right: 6.5rem;
   background-image: radial-gradient(#112240, #0a192f);
   z-index: 1000;

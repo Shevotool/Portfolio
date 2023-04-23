@@ -10,6 +10,9 @@ const navigation1 = document.querySelector("#section--1");
 const navigation2 = document.querySelector("#section--2");
 
 const dotBtn = document.querySelectorAll(".navigation__dots-btn");
+const navItems = document.querySelectorAll(".navigation__link");
+const checkbox = document.querySelector(".navigation__checkbox");
+const background = document.querySelector(".navigation__background");
 
 let selectedBtn = null;
 
@@ -68,5 +71,24 @@ dotBtn3.addEventListener("click", function (e) {
   e.preventDefault();
   setTimeout(function () {
     section3.scrollIntoView({ behavior: "smooth", offsetTop: 100 });
+  });
+});
+
+// navigation
+
+document
+  .querySelector(".navigation__list")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    if (e.target.classList.contains("navigation__link")) {
+      const id = e.target.getAttribute("href");
+      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    }
+  });
+
+navItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    checkbox.checked = false;
+    background.classList.remove("navigation__background--open");
   });
 });

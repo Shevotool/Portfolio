@@ -26,15 +26,22 @@
 
   &__font-box {
     position: absolute;
+    top: -2.2rem;
+    left: -59.2rem;
+  }
+
+  &__font-box--2 {
+    position: absolute;
+    width: 30rem;
     top: -2rem;
-    left: -54rem;
+    left: -7.5rem;
   }
 
   &__font {
     //height: 20rem;
     display: inline-block;
     transform: rotate(90deg);
-    height: 70rem;
+    height: 76rem;
   }
 
   &__logo {
@@ -88,7 +95,7 @@
   top: 6rem;
   right: 12%;
   //transform: translate(-50%, 32px);
-  z-index: 2000;
+  z-index: 999;
 }
 
 .nav-icons ion-icon {

@@ -4,7 +4,7 @@
   }
 
   &__button {
-    background: $color-primary-light;
+    background-color: $color-primary-light;
     /*  background-color: $color-white; */
     height: 7rem;
     width: 7rem;
@@ -34,11 +34,11 @@
   }
 
   &__background {
-    height: 4rem;
+    height: 6rem;
     width: 6rem;
     border-radius: 50%;
     position: fixed;
-    top: 6.5rem;
+    top: 4rem;
     right: 6.5rem;
     background-image: radial-gradient(
       $color-primary-light,

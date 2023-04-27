@@ -1,3 +1,5 @@
+"use strict";
+
 const dotBtn1 = document.querySelector(".dot-1");
 const dotBtn2 = document.querySelector(".dot-2");
 const dotBtn3 = document.querySelector(".dot-3");
@@ -16,10 +18,12 @@ const background = document.querySelector(".navigation__background");
 
 // cards
 const carrousel = document.querySelector(".carrousel");
-const cardsContainer = document.querySelector(".carrousel-cards");
-const prevBtn = document.querySelector(".carrousel-prev");
-const nextBtn = document.querySelector(".carrousel-sig");
+const cardsContainer = document.querySelector(".carrousel__container--cards");
+const prevBtn = document.querySelector(".carrousel__btn--prev");
+const nextBtn = document.querySelector(".carrousel__btn--sig");
 const cards = document.querySelectorAll(".card");
+
+// Carrousel
 const cardWidth = cards[0].offsetWidth;
 const cardsCount = cards.length;
 const cardContainerWidth = cardWidth * cardsCount;
@@ -32,8 +36,8 @@ nextBtn.addEventListener("click", function () {
     cardIndex++;
     cardsContainer.style.marginLeft = `-${cardIndex * cardWidth}px`;
   } else {
-    cardIndex = 0;
-    cardsContainer.style.marginLeft = `0px`;
+    // si el usuario está en el último card, no avanzar más
+    cardIndex = cardsLeft;
   }
 });
 
@@ -42,8 +46,8 @@ prevBtn.addEventListener("click", function () {
     cardIndex--;
     cardsContainer.style.marginLeft = `-${cardIndex * cardWidth}px`;
   } else {
-    cardIndex = cardsLeft;
-    cardsContainer.style.marginLeft = `-${cardsCount * cardWidth}px`;
+    // si el usuario está en el primer card, no retroceder más
+    cardIndex = 0;
   }
 });
 
@@ -128,4 +132,27 @@ navItems.forEach((item) => {
     checkbox.checked = false;
     background.classList.remove("navigation__background--open");
   });
+});
+
+//Reveal sections
+const allSections = document.querySelectorAll(".section");
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove("section--hidden");
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
+  //observer.unobserve(entry.target);
 });

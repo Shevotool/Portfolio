@@ -201,6 +201,13 @@ body {
     .section-tours {
       padding: 20rem 0 10rem 0; } }
 
+.section {
+  transition: transform 1s, opacity 1s; }
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem); }
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   font-weight: 700;
@@ -553,43 +560,56 @@ body {
   100% {
     transform: scaleX(1); } }
 
+.hr {
+  background-color: #67fcc8;
+  height: 0.125em;
+  margin: 0 auto;
+  margin-top: 4rem;
+  max-width: 60%; }
+
 .carrousel {
-  width: 90rem;
+  width: 127rem;
   margin: 0 auto;
   overflow: hidden; }
+  .carrousel__flex--container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0rem 6rem 0rem 6rem; }
+  .carrousel__text {
+    font-size: 3rem;
+    margin-bottom: 2rem; }
   .carrousel__btns {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    align-items: flex-end;
+    justify-content: end;
+    gap: 0.5rem;
+    margin-right: 6rem;
+    margin-top: 1rem;
     margin-bottom: 5rem; }
-
-.carrousel-cards {
-  display: flex;
-  width: fit-content;
-  margin: 0;
-  padding: 0;
-  transition: margin-left 1s ease-in-out, opacity 0.5s ease-in-out; }
-
-.carrousel-prev,
-.carrousel-sig {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer; }
-
-.carrousel-prev:hover,
-.carrousel-sig:hover {
-  background-color: #3e8e41; }
+  .carrousel__btn--prev, .carrousel__btn--sig {
+    background-color: transparent;
+    color: white;
+    border: 2px solid #67fcc8;
+    padding: 5px 10px;
+    font-size: 24px;
+    cursor: pointer; }
+  .carrousel__btn--prev:hover, .carrousel__btn--sig:hover {
+    background-color: #67fcc8;
+    color: #112240; }
+  .carrousel__container--cards {
+    display: flex;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    transition: margin-left 0.6s ease-in-out, opacity 0.5s ease-in-out; }
 
 .card {
   flex: 0 0 auto;
   width: 40rem;
-  height: 40rem;
+  height: auto;
   margin: 0 1rem;
   display: flex;
   justify-content: center;

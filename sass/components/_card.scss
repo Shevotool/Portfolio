@@ -1,6 +1,50 @@
+.carrousel {
+  width: 90rem;
+  margin: 0 auto;
+  overflow: hidden;
 
+  &__btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.carrousel-cards {
+  display: flex;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  transition: margin-left 1s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.carrousel-prev,
+.carrousel-sig {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.carrousel-prev:hover,
+.carrousel-sig:hover {
+  background-color: #3e8e41;
+}
 
 .card {
+  flex: 0 0 auto;
+  width: 40rem;
+  height: 40rem;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   // FUNCTIONALITY
   perspective: 150rem;
@@ -12,7 +56,7 @@
 
   &__side {
     height: 42rem;
-    transition: all .8s ease;
+    transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -30,32 +74,53 @@
       transform: rotateY(-180deg);
 
       &-1 {
-        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
       }
 
       &-2 {
-        background-image: linear-gradient(to right bottom, $color-quartery-light, $color-quartery-dark);
+        background-image: linear-gradient(
+          to right bottom,
+          $color-quartery-light,
+          $color-quartery-dark
+        );
       }
 
       &-3 {
-        background-image: linear-gradient(to right bottom, $color-tertiary-light,
-            $color-tertiary-dark);
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
       }
 
       &-4 {
-        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
       }
-        
+
       &-5 {
-        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
       }
-        
+
       &-6 {
-        background-image: linear-gradient(to right bottom, $color-tertiary-light,
-        $color-tertiary-dark);
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
       }
     }
-
   }
 
   &:hover &__side--front {
@@ -91,14 +156,14 @@
     &--4 {
       background-image: url(../img/smart-img.webp);
     }
-      
+
     &--5 {
       background-image: url(../img/budget.webp);
     }
-      
+
     &--6 {
       background-image: url(../img/smart-img.webp);
-   }
+    }
   }
 
   &__details {
@@ -108,7 +173,6 @@
       list-style: none;
       width: 80%;
       margin: 0 auto;
-
 
       li {
         text-align: center;
@@ -143,7 +207,7 @@
     font-weight: 500;
     text-transform: uppercase;
     line-height: 1.7;
-    
+
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
@@ -164,20 +228,11 @@
     margin-bottom: -6rem;
   }
 
-    &__value-1 {
-      color: $color-grey-dark-3;
-    }
+  &__value-1 {
+    color: $color-grey-dark-3;
+  }
 
-    &__value-2 {
-      color: $color-pink;
-    }
-
-  
+  &__value-2 {
+    color: $color-pink;
+  }
 }
-
-
-
-
-
-
-

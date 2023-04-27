@@ -14,7 +14,42 @@ const navItems = document.querySelectorAll(".navigation__link");
 const checkbox = document.querySelector(".navigation__checkbox");
 const background = document.querySelector(".navigation__background");
 
+// cards
+const carrousel = document.querySelector(".carrousel");
+const cardsContainer = document.querySelector(".carrousel-cards");
+const prevBtn = document.querySelector(".carrousel-prev");
+const nextBtn = document.querySelector(".carrousel-sig");
+const cards = document.querySelectorAll(".card");
+const cardWidth = cards[0].offsetWidth;
+const cardsCount = cards.length;
+const cardContainerWidth = cardWidth * cardsCount;
+let cardsShown = Math.floor(carrousel.offsetWidth / cardWidth);
+let cardsLeft = cardsCount - cardsShown;
+let cardIndex = 0;
+
+nextBtn.addEventListener("click", function () {
+  if (cardIndex < cardsLeft) {
+    cardIndex++;
+    cardsContainer.style.marginLeft = `-${cardIndex * cardWidth}px`;
+  } else {
+    cardIndex = 0;
+    cardsContainer.style.marginLeft = `0px`;
+  }
+});
+
+prevBtn.addEventListener("click", function () {
+  if (cardIndex > 0) {
+    cardIndex--;
+    cardsContainer.style.marginLeft = `-${cardIndex * cardWidth}px`;
+  } else {
+    cardIndex = cardsLeft;
+    cardsContainer.style.marginLeft = `-${cardsCount * cardWidth}px`;
+  }
+});
+
 let selectedBtn = null;
+
+// Scroll
 
 window.addEventListener("scroll", function () {
   const scrollPosition = window.pageYOffset;
@@ -52,6 +87,8 @@ dotBtn.forEach(function (btn) {
     selectedBtn.classList.add("navigation__dots-btn--fill");
   });
 });
+
+// dots
 
 dotBtn1.addEventListener("click", function (e) {
   e.preventDefault();

@@ -5,7 +5,6 @@
 
   &__button {
     background-color: $color-primary-light;
-    /*  background-color: $color-white; */
     height: 7rem;
     width: 7rem;
     position: fixed;
@@ -179,30 +178,5 @@
   &__checkbox:checked + &__button &__icon::after {
     top: 0;
     transform: rotate(-135deg);
-  }
-
-  &__dots {
-    // position: fixed;
-    position: fixed;
-    top: 35vh;
-    right: 8.5rem;
-    //transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 2000;
-  }
-
-  &__dots-btn {
-    height: 16px;
-    width: 16px;
-    background-color: $color-pink;
-    border: 2px solid $color-primary-light;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-
-  &__dots-btn--fill {
-    background-color: $color-green;
   }
 }

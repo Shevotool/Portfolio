@@ -10,9 +10,6 @@ npm run compile:sass -->
 
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-  <!--  <link rel="stylesheet" href="css/icon-font.css"> -->
-  <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
-
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
@@ -31,6 +28,10 @@ npm run compile:sass -->
 </head>
 
 <body>
+
+  <div id="loader">
+    <img src='assets/wolf-logo.svg' alt="Wolf logo">
+  </div>
   <!-- ***** Navigation ***** -->
   <div class="navigation" id="section-1">
     <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
@@ -39,25 +40,38 @@ npm run compile:sass -->
     </label>
 
     <div class="navigation__background">&nbsp;</div>
-
     <nav class="navigation__nav">
       <ul class="navigation__list">
         <li class="navigation__item"><a href="#section-1" id="section--1" class="navigation__link"><span><ion-icon
                 name="home"></ion-icon></span>Home</a></li>
         <li class="navigation__item"><a href="#section-2" id="section--2" class="navigation__link"><span><ion-icon
                 name="star"></ion-icon></span>Experience</a></li>
-        <li class="navigation__item"><a href="#section-3" class="navigation__link"><span>03</span>Portfolio</a></li>
-        <li class="navigation__item"><a href="#section-4" class="navigation__link"><span>04</span>Prices</a></li>
-        <li class="navigation__item"><a href="#section-5" class="navigation__link"><span>05</span>Contact</a></li>
+        <li class="navigation__item"><a href="#section-3" class="navigation__link"><span><ion-icon
+                name="briefcase"></ion-icon></span>My Projects</a></li>
+        <li class="navigation__item"><a href="#section-4" class="navigation__link"><span><ion-icon
+                name="construct"></ion-icon></span>My Services</a></li>
+        <li class="navigation__item"><a href="#section-5" class="navigation__link"><span><ion-icon
+                name="chatbubbles"></ion-icon></span>Contact Me</a></li>
       </ul>
     </nav>
 
-    <div class="navigation__dots">
-      <button class="navigation__dots-btn  dot-1">&nbsp;</button>
-      <button class="navigation__dots-btn dot-2">&nbsp;</button>
-      <button class="navigation__dots-btn dot-3">&nbsp;</button>
-      <button class="navigation__dots-btn dot-4">&nbsp;</button>
-      <button class="navigation__dots-btn dot-5">&nbsp;</button>
+    <!-- Icons hero section -->
+    <div class="functionalities">
+      <ul class="functionalities__list">
+        <!-- ***** Social media ***** -->
+        <li>
+          <div class="main-nav-link functionalities__icon" id="dark-mode">
+            💡
+          </div>
+        </li>
+        <li><a href="#" class="main-nav-link functionalities__icon" id="show" target="_blank"><ion-icon
+              name="document"></ion-icon></a></li>
+        <li><a href="#popup" class="main-nav-link functionalities__icon" id="show"><ion-icon
+              name="person"></ion-icon></a>
+        </li>
+        <!-- ***** Mail ***** -->
+        <li><a href="#" class="main-nav-link functionalities__icon"><ion-icon name="mail"></ion-icon></a></li>
+      </ul>
     </div>
   </div>
 
@@ -73,7 +87,7 @@ npm run compile:sass -->
       <img src="assets/header-line-1.svg" alt="Programming reflets in life" width="100%" height="100%"
         class="header__font">
     </div>
-
+    <!-- ***** Line ***** -->
     <div class="header__font-box--2">
       <img src="assets/andres-font.svg" alt="Programming reflets in life" width="100%" height="100%"
         class="header__font">
@@ -113,7 +127,7 @@ npm run compile:sass -->
           </span></span>
 
         </h1>
-        <img src="img/me.webp" alt="Logo" width="100%" height="100%" class="header__me-img">
+        <img src="assets/me-3.webp" alt="Logo" width="100%" height="100%" class="header__me-img">
       </div>
       <a href="#" class="btn btn--blue-green btn--animated">Contact me</a>
     </div>
@@ -133,18 +147,20 @@ npm run compile:sass -->
       </ul>
     </div>
   </header>
+
   <!-- ***** My Experience ***** -->
   <main>
-    <section class="section-about">
+    <section class="section-about" data-dark>
       <div class="section">
         <div class="u-center-text u-margin-bottom-big" id="section-2">
-          <h2 class="heading-secondary">
+          <h2 class="heading-secondary" data-dark>
             My Experience
           </h2>
         </div>
         <div class="row">
           <div class="col-1-of-2">
-            <h3 class="heading-tertiary u-margin-bottom-small">🔭 I’m currently working as a QA Developer at Arcade. 🛸
+            <h3 class="heading-tertiary u-margin-bottom-small" data-dark>🔭 I’m currently working as a QA Developer at
+              Arcade. 🛸
             </h3>
             <p class="paragraph">
               • Skilled and experienced QA developer, I consistently deliver high-quality products with an attention to
@@ -154,9 +170,9 @@ npm run compile:sass -->
               ensuring
               timely project delivery and meeting stakeholder needs.
             </p>
-            <h3 class="heading-tertiary u-margin-bottom-small">🔭 Developer with experience in Front-end
+            <h3 class="heading-tertiary u-margin-bottom-small" data-dark>🔭 Developer with experience in Front-end
               development. 👾</h3>
-            <p class="paragraph">
+            <p class="paragraph2">
               • I have extensive and deep knowledge of HTML, CSS, SASS & JavaScript (ES6), TypeScript and experience
               with
               the most
@@ -165,11 +181,11 @@ npm run compile:sass -->
               visually appealing
               and intuitive interfaces that enhance the user experience.
             </p>
-            <a href="#" class="btn-text">Learn more &rarr;</a>
+            <a href="#" class="btn btn--blue-green" data-dark>Learn more <ion-icon name="arrow-forward"></ion-icon></a>
           </div>
           <!-- Technologies -->
           <div class="col-1-of-2">
-            <h3 class="heading-tertiary u-margin-bottom-small u-center-text">🧨 My Stack of technologies 💥
+            <h3 class="heading-tertiary u-margin-bottom-small u-center-text" data-dark>🧨 My Stack of technologies 💥
             </h3>
             <div class="tech__stack">
               <ul class="tech__stack-ul">
@@ -746,11 +762,11 @@ npm run compile:sass -->
       <!--     </div> -->
     </section>
     <!-- ***** Falta ***** -->
-    <section class="section-tours" id="section-tours">
+    <section class="section-services" data-dark id="section-services">
       <div class="section">
         <div class="u-center-text u-margin-bottom-big">
-          <h2 class="heading-secondary">
-            Most popular tours
+          <h2 class="heading-secondary" data-dark="">
+            My Services
           </h2>
         </div>
         <div class="u-center-text u-margin-top-huge">

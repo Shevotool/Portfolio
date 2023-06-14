@@ -759,23 +759,77 @@ npm run compile:sass -->
           </div>
         </div>
       </div>
-      <!--     </div> -->
     </section>
-    <!-- ***** Falta ***** -->
-    <section class="section-services" data-dark id="section-services">
+
+    <!-- ***** Section Contact ***** -->
+    <section class="section-contact" data-dark id="section-contact">
       <div class="section">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary" data-dark="">
-            My Services
+            Contact me
           </h2>
         </div>
-        <div class="u-center-text u-margin-top-huge">
-          <a href="#" class="btn btn--blue-green">Discover all tours</a>
+
+        <div class="row">
+          <div class="image">
+            <img src="assets/wolf-logo.svg" alt="Developer img" width="100%" height="100%" class="image__form--logo">
+            <div class="image__form">
+              <form action="#" class="form" netlify>
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary">
+                    Let's work togheter
+                  </h2>
+                </div>
+                <div class="form__group">
+                  <input type="text" class="form__input" placeholder="Full Name" id="name" required>
+                  <label for="name" class="form__label">Full name</label>
+                </div>
+                <div class="form__group">
+                  <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                  <label for="email" class="form__label">Email address</label>
+                </div>
+
+
+                <div class="form__group">
+                  <button class="btn btn--blue-green">Send email &rarr;</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+        <!--        <div class="u-center-text u-margin-top-huge">
+          <a href="#" class="btn btn--blue-green">Discover all tours</a>
+        </div> -->
       </div>
     </section>
-
   </main>
+
+  <footer class="footer">
+    <div class="footer__logo-box">
+      <img src="assets/wolf-logo.svg" alt="Full logo" class="footer__logo">
+    </div>
+    <div class="row">
+      <div class="col-1-of-2">
+        <div class="footer_navigation">
+          <ul class="footer__list">
+            <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-1-of-2">
+        <p class="footer__copyright">
+          Built by <a href="#" class="footer__link">Andres González</a> for his online course <a href=""
+            class="footer__link">Advanced Css and Sass</a>. Copyright &copy; by Andres González. you are 100% allowed to
+          use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the
+          original author, Jonas Schmedtmann, is of course highly appreciated.
+        </p>
+      </div>
+    </div>
+  </footer>
 
   <!-- ***** Popup ***** -->
   <div class="popup" id="popup">

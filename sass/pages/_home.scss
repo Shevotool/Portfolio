@@ -23,13 +23,66 @@
   }
 }
 
-.section-services {
-  background-color: $color-grey-light-1;
+.section-contact {
+  background-color: $color-pink;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem;
 
   @include respond(tab-port) {
     padding: 20rem 0 10rem 0;
+  }
+}
+
+.image {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/hero-background-4.webp);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 65%,
+        transparent 65%
+      ),
+      url(../img/hero-background-4.webp);
+    background-size: cover;
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url(../img/hero-background-4.webp);
+  }
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+
+    @include respond(tab-land) {
+      width: 56%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    &--logo {
+      position: absolute;
+      max-width: 20%;
+      height: auto;
+      right: 20%;
+    }
   }
 }
 

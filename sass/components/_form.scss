@@ -9,7 +9,7 @@
     color: inherit;
     padding: 1.5rem 2rem;
     border-radius: 2px;
-    background-color: rgba($color-white, 0.5);
+    background-color: rgba($color-white, 0.6);
     border: none;
     border-bottom: 3px solid transparent;
     width: 90%;
@@ -23,11 +23,11 @@
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
-      border-bottom: 3px solid $color-primary;
+      border-bottom: 3px solid $color-primary-success;
     }
 
     &:focus:invalid {
-      border-bottom: 3px solid $color-secondary-dark;
+      border-bottom: 3px solid $color-primary-alert;
     }
 
     &::-webkit-input-placeholder {
@@ -48,5 +48,20 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem);
+  }
+
+  &__textarea {
+    resize: none;
+    height: 15rem;
+    margin-bottom: 2rem;
+  }
+
+  &__line {
+    position: relative;
+    top: 14rem;
+    left: 71rem;
+    width: 33rem;
+    height: 0.2rem;
+    background-color: $color-green;
   }
 }

@@ -34,6 +34,7 @@
 }
 
 .image {
+  position: relative;
   background-image: linear-gradient(
       105deg,
       rgba($color-white, 0.9) 0%,
@@ -44,6 +45,15 @@
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+  &__heading {
+    position: absolute;
+    font-size: 2.6rem;
+    top: 10rem;
+    right: 10rem;
+    color: $color-grey-dark;
+    //color: $color-green;
+  }
 
   @include respond(tab-land) {
     background-image: linear-gradient(
@@ -79,9 +89,10 @@
 
     &--logo {
       position: absolute;
-      max-width: 20%;
-      height: auto;
-      right: 20%;
+      max-width: 30%;
+      top: 5rem;
+      /*  height: 60rem; */
+      right: 10%;
     }
   }
 }

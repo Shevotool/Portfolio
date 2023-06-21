@@ -64,6 +64,7 @@
 
   &__me-img {
     display: inline-block;
+
     margin-top: 6rem;
     margin-left: -20rem;
     max-width: 25rem;
@@ -88,6 +89,10 @@
 
 .react {
   color: $color-green;
+}
+
+.javascript {
+  color: $color-js;
 }
 
 .nav-icons {

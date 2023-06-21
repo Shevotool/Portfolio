@@ -54,7 +54,13 @@ let selectedBtn = null;
 const $themeBtn = document.querySelector("#dark-mode");
 const $selectors = document.querySelectorAll("[data-dark]");
 
+// Set Current Year
+const year = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+year.textContent = currentYear;
+
 // navigation
+
 document
   .querySelector(".navigation__list")
   .addEventListener("click", function (e) {
@@ -63,15 +69,20 @@ document
       const id = e.target.getAttribute("href");
       document.querySelector(id).scrollIntoView({ behavior: "smooth" });
       checkbox.checked = false;
-      background.classList.remove("navigation__background--open");
     }
   });
 
 navItems.forEach((item) => {
   item.addEventListener("click", function () {
     checkbox.checked = false;
-    background.classList.remove("navigation__background--open");
   });
+});
+
+const scrollContactBtn = document.querySelector("#scroll-contact");
+scrollContactBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  const idContact = e.target.getAttribute("href");
+  document.querySelector(idContact).scrollIntoView({ behavior: "smooth" });
 });
 
 //Reveal sections
@@ -79,10 +90,7 @@ const allSections = document.querySelectorAll(".section");
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;
-  //console.log(entry);
-
   if (!entry.isIntersecting) return;
-
   entry.target.classList.remove("section--hidden");
 };
 
@@ -144,11 +152,20 @@ const init = () => {
 
 init();
 
-//console.log(init);
-
+// Loader
 document.addEventListener("DOMContentLoaded", function () {
   const loader = document.getElementById("loader");
   setTimeout(() => {
     loader.style.display = "none";
   }, 100);
+});
+
+// Arrow up
+const arrowUp = document.querySelector("#arrow-up");
+arrowUp.addEventListener("click", function (e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });

@@ -169,3 +169,9 @@
     transform: translateY(0);
   }
 }
+
+.btn--flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

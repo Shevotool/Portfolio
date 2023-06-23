@@ -5,6 +5,12 @@
   font-size: 1.4rem;
   color: $color-grey-light-1;
 
+  &__container {
+    max-width: 130rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+
   @include respond(tab-port) {
     padding: 8rem 0;
   }
@@ -21,10 +27,6 @@
   &__logo {
     width: 25rem;
     height: auto;
-  }
-
-  &__container {
-    text-align: center;
   }
 
   &__row {

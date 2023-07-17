@@ -15,6 +15,10 @@
     //Change for the <button> element
     border: none;
     cursor: pointer;
+
+    @include respond(tab-port) {
+      margin-left: 14rem;
+    }
   }
 
   &:hover {

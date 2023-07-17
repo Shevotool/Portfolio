@@ -65,3 +65,23 @@
     background-color: $color-green;
   }
 }
+
+.image {
+  &__form--logo {
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+
+  &__heading {
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+}
+
+.form__line {
+  @include respond(tab-land) {
+    display: none;
+  }
+}

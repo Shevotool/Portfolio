@@ -29,7 +29,7 @@
     top: -2.2rem;
     left: -59.2rem;
 
-    @include respond(tab-land) {
+    @include respond(tab-port) {
       display: none;
     }
   }
@@ -40,7 +40,7 @@
     top: -2rem;
     left: -7.5rem;
 
-    @include respond(tab-land) {
+    @include respond(tab-port) {
       display: none;
     }
   }
@@ -55,6 +55,10 @@
   &__logo {
     max-width: 35%;
     height: auto;
+
+    @include respond(big-phone) {
+      max-width: 25%;
+    }
   }
 
   &__text-box {
@@ -62,6 +66,31 @@
     top: 40%;
     left: 47vw;
     transform: translate(-50%, -50%);
+
+    @include respond(big-phone) {
+      left: 0;
+      margin-top: 4rem;
+      padding-left: 70rem;
+      margin-left: 2rem;
+    }
+
+    @include respond(middle-phone) {
+      left: 0;
+      padding-left: 0 !important;
+      margin-right: 20rem;
+    }
+
+    @include respond(phone) {
+      left: 0;
+      margin-top: -5rem;
+      margin-left: 20rem;
+    }
+
+    @include respond(smaller-phone) {
+      left: 0;
+      margin-left: 4rem;
+      padding-right: 0;
+    }
   }
 
   &__flex-box {
@@ -99,6 +128,10 @@
     @include respond(tab-land) {
       margin-right: 3rem;
     }
+
+    @include respond(small-phone) {
+      margin-right: 10rem;
+    }
   }
 }
 
@@ -116,6 +149,10 @@
   right: 12%;
   //transform: translate(-50%, 32px);
   z-index: 999;
+
+  @include respond(phone) {
+    right: 2%;
+  }
 }
 
 .nav-icons ion-icon {
@@ -129,6 +166,10 @@
   right: 6%;
   z-index: 999;
 
+  @include respond(big-phone) {
+    display: none;
+  }
+
   &__list {
     display: flex;
     list-style: none;
@@ -139,6 +180,18 @@
   &__icon {
     color: $color-grey-dark;
     font-size: 2.2rem;
+
+    @include respond(tab-land) {
+      font-size: 2.6rem;
+    }
+
+    @include respond(big-phone) {
+      font-size: 3.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 3.7rem;
+    }
   }
 }
 

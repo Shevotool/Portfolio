@@ -14,8 +14,21 @@ body {
   margin-top: 8rem;
   margin-left: 5rem;
 
+  @include respond(tab-land) {
+    margin-left: 15rem;
+  }
+
   @include respond(tab-port) {
     margin-left: 15rem;
+  }
+
+  @include respond(big-phone) {
+    margin-left: 55rem;
+  }
+
+  @include respond(phone) {
+    width: 55rem;
+    margin-left: -5rem;
   }
 
   &--main {
@@ -29,6 +42,10 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+
+    @include respond(phone) {
+      font-size: 2.6rem;
+    }
 
     /*
       animation-delay: 3s;
@@ -71,6 +88,20 @@ body {
     font-weight: 400;
     line-height: 1.2;
     animation: moveInRight 1s ease-out;
+
+    @include respond(phone) {
+      font-size: 2.6rem;
+      width: 72rem;
+    }
+
+    @include respond(smaller-phone) {
+      width: 58rem;
+    }
+
+    @include respond(small-phone) {
+      font-size: 2.6rem;
+      width: 60rem;
+    }
   }
 }
 
@@ -89,11 +120,12 @@ body {
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s;
+}
 
-  /*   &:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
-    text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
-  } */
+.content {
+  @include respond(phone) {
+    display: none;
+  }
 }
 
 .color-tertiary {
@@ -105,12 +137,37 @@ body {
   font-size: $default-font-size;
   font-weight: 700;
   text-transform: uppercase;
+
+  @include respond(big-phone) {
+    font-size: 2.2rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.6rem;
+  }
+
+  @include respond(small-phone) {
+    font-size: 2rem;
+  }
 }
 
 .paragraph,
 .paragraph2 {
   color: $color-grey-dark-3;
   font-size: $default-font-size;
+
+  @include respond(big-phone) {
+    width: 95%;
+    font-size: 2.2rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.6rem;
+  }
+
+  @include respond(small-phone) {
+    font-size: 2.4rem;
+  }
 
   &:not(:last-child) {
     margin-bottom: 3rem;

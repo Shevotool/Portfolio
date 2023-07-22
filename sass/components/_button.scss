@@ -16,8 +16,20 @@
     border: none;
     cursor: pointer;
 
+    @include respond(tab-land) {
+      margin-left: 2rem;
+    }
+
     @include respond(tab-port) {
-      margin-left: 14rem;
+      margin-left: 15rem;
+    }
+
+    @include respond(big-phone) {
+      margin-left: 55rem;
+    }
+
+    @include respond(phone) {
+      margin-left: -5rem;
     }
   }
 

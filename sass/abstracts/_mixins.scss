@@ -31,19 +31,45 @@ $breakpoint arguement choices:
 */
 
 @mixin respond($breakpoint) {
+  @if $breakpoint == small-phone {
+    @media (max-width: 25.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == smaller-phone {
+    @media (max-width: 31.5em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == phone {
-    @media (max-width: 37.5em) { @content };
+    @media (max-width: 39.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-phone {
+    @media (max-width: 44.5em) {
+      @content;
+    }
   }
 
   @if $breakpoint == tab-port {
-    @media (max-width: 56.25em) { @content };
+    @media (max-width: 56.25em) {
+      @content;
+    }
   }
 
   @if $breakpoint == tab-land {
-    @media (max-width: 75em) { @content };
+    @media (max-width: 75em) {
+      @content;
+    }
   }
 
   @if $breakpoint == big-desktop {
-    @media (min-width: 112.5em) { @content };
+    @media (min-width: 112.5em) {
+      @content;
+    }
   }
 }

@@ -14,42 +14,6 @@ const checkbox = document.querySelector(".navigation__checkbox");
 const paragraph = document.querySelector(".paragraph");
 const paragraph2 = document.querySelector(".paragraph2");
 
-// variables Carrousel
-const carrousel = document.querySelector(".carrousel");
-const cardsContainer = document.querySelector(".carrousel__container--cards");
-const prevBtn = document.querySelector(".carrousel__btn--prev");
-const nextBtn = document.querySelector(".carrousel__btn--sig");
-const cards = document.querySelectorAll(".card");
-const cardWidth = cards[0].offsetWidth;
-const cardsCount = cards.length;
-const cardContainerWidth = cardWidth * cardsCount;
-let cardsShown = Math.floor(carrousel.offsetWidth / cardWidth);
-let cardsLeft = cardsCount - cardsShown;
-let cardIndex = 0;
-
-// Carrousel
-nextBtn.addEventListener("click", function () {
-  if (cardIndex < cardsLeft) {
-    cardIndex++;
-    cardsContainer.style.marginLeft = `-${cardIndex * cardWidth}px`;
-  } else {
-    // si el usuario está en el último card, no avanzar más
-    cardIndex = cardsLeft;
-  }
-});
-
-prevBtn.addEventListener("click", function () {
-  if (cardIndex > 0) {
-    cardIndex--;
-    cardsContainer.style.marginLeft = `-${cardIndex * cardWidth}px`;
-  } else {
-    // si el usuario está en el primer card, no retroceder más
-    cardIndex = 0;
-  }
-});
-
-let selectedBtn = null;
-
 // Dark mode
 const $themeBtn = document.querySelector("#dark-mode");
 const $selectors = document.querySelectorAll("[data-dark]");
@@ -157,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const loader = document.getElementById("loader");
   setTimeout(() => {
     loader.style.display = "none";
-  }, 100);
+  }, 200);
 });
 
 // Arrow up

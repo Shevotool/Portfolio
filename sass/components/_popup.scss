@@ -10,6 +10,10 @@
   visibility: hidden;
   transition: all 0.3s;
 
+  @include respond(big-phone) {
+    display: none;
+  }
+
   &__content {
     @include absCenter;
     width: 65%;
@@ -26,6 +30,10 @@
   &__left {
     width: 33.333333%;
     display: table-cell;
+
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__right {
@@ -54,6 +62,10 @@
     grid-gap: 10px;
     font-size: 1.4rem;
     margin-bottom: 4rem;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &__contact--img {
@@ -64,6 +76,10 @@
     /*  margin: 0 auto; */
     margin-top: 20px;
     margin-bottom: 0;
+
+    @include respond(tab-port) {
+      margin-left: 4rem;
+    }
   }
 
   &__contact--list {
@@ -92,6 +108,14 @@
     font-weight: 500;
     font-size: 2rem;
     transition: all 0.3s;
+
+    @include respond(tab-land) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.6rem;
+    }
   }
 
   .main-nav-link:hover,

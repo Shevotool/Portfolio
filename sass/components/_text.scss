@@ -15,12 +15,28 @@
     &:before {
       content: "[";
       left: 0;
+
+      @include respond(tab-port) {
+        left: 1rem;
+      }
+
+      @include respond(big-phone) {
+        left: 2.4rem;
+      }
     }
 
     &:after {
       content: "]";
       position: absolute;
       right: 0;
+
+      @include respond(tab-port) {
+        right: 1rem;
+      }
+
+      @include respond(big-phone) {
+        right: 2.4rem;
+      }
     }
 
     &:after,
@@ -63,6 +79,13 @@
         margin: 0;
       }
     }
+  }
+}
+
+.responsive-text {
+  @include respond(tab-port) {
+    margin-top: 6rem;
+    margin-left: 2rem;
   }
 }
 

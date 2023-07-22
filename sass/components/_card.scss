@@ -7,81 +7,66 @@
 }
 
 .carrousel {
-  width: 127rem;
+  max-width: 80%;
   margin: 0 auto;
   overflow: hidden;
 
   @include respond(tab-land) {
-    width: 82rem;
+    max-width: 63%;
+  }
+
+  @include respond(tab-port) {
+    max-width: 75%;
+  }
+
+  @include respond(big-phone) {
+    max-width: 80%;
   }
 
   &__flex--container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     padding: 0rem 6rem 0rem 6rem;
-
-    @include respond(tab-land) {
-      display: flex;
-      flex-direction: row;
-    }
   }
 
   &__text {
     font-size: 3rem;
     margin-bottom: 2rem;
-  }
 
-  &__btns {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: end;
-    gap: 0.5rem;
-    margin-right: 6rem;
-    margin-top: 1rem;
-    margin-bottom: 5rem;
-  }
-
-  &__btn--prev,
-  &__btn--sig {
-    background-color: transparent;
-    color: white;
-    border: 2px solid $color-green;
-    padding: 5px 10px;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  &__btn--prev:hover,
-  &__btn--sig:hover {
-    background-color: $color-green;
-    color: $color-primary-light;
+    @include respond(phone) {
+      text-align: center;
+    }
   }
 
   &__container--cards {
-    display: flex;
-    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 0;
     padding: 0;
     margin-top: 2rem;
     margin-bottom: 3rem;
-    transition: margin-left 0.6s ease-in-out, opacity 0.5s ease-in-out;
+
+    @include respond(tab-land) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond(big-phone) {
+      grid-template-columns: 1fr 1fr;
+    }
 
     @include respond(phone) {
+      display: flex;
       flex-direction: column;
-      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+      row-gap: 1rem;
     }
   }
 }
 
 .card {
-  flex: 0 0 auto;
   width: 40rem;
   height: auto;
   margin: 0 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 2rem;
 
   // FUNCTIONALITY
   perspective: 150rem;

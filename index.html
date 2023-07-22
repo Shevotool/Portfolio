@@ -29,8 +29,8 @@ npm run compile:sass -->
 
 <body>
 
-  <div id="loader">
-    <img src='assets/wolf-logo.svg' alt="Wolf logo">
+  <div id="loader" class="loader-img">
+    <img src='assets/wolf-logo.svg' alt="Wolf logo" class="loader">
   </div>
   <!-- ***** Navigation ***** -->
   <div class="navigation" id="section-1">
@@ -101,7 +101,7 @@ npm run compile:sass -->
       <div class="header__flex-box">
         <h1 class="heading-primary">
           <span class="heading-primary--main">👋 Hi, my name is</span>
-          <span class="heading-primary--sub">Andrés González.</span><span class="heading-primary--text">
+          <span class="heading-primary--sub">Andrés González</span><span class="heading-primary--text">
             <div class="content">
               <div class="content__container">
                 <p class="content__container__text">
@@ -174,14 +174,14 @@ npm run compile:sass -->
   <!-- ***** My Experience ***** -->
   <main>
     <section class="section-about" data-dark>
-      <div class="section">
+      <div class="section-experience">
         <div class="u-center-text u-margin-bottom-big" id="section-2">
           <h2 class="heading-secondary" data-dark>
             My Experience
           </h2>
         </div>
         <div class="row">
-          <div class="col-1-of-2">
+          <div class="col-1-of-2 experience-left">
             <h3 class="heading-tertiary u-margin-bottom-small" data-dark>🔭 I’m currently working as a QA Developer at
               Arcade. 🛸
             </h3>
@@ -204,13 +204,14 @@ npm run compile:sass -->
               visually appealing
               and intuitive interfaces that enhance the user experience.
             </p>
-            <a href="cv.html" class="btn btn--blue-green" data-dark>
+            <a href="#" class="btn btn--blue-green btn--blue-responsive" data-dark>
               <div class="btn--flex">Learn more <ion-icon name="arrow-forward"></ion-icon></div>
             </a>
           </div>
           <!-- Technologies -->
           <div class="col-1-of-2">
-            <h3 class="heading-tertiary u-margin-bottom-small u-center-text" data-dark>🧨 My Stack of technologies 💥
+            <h3 class="heading-tertiary u-margin-bottom-small u-center-text responsive-text" data-dark>🧨 My Stack of
+              technologies 💥
             </h3>
             <div class="tech__stack">
               <ul class="tech__stack-ul">
@@ -612,10 +613,6 @@ npm run compile:sass -->
       <div class="carrousel">
         <div class="carrousel__flex--container">
           <p class="carrousel__text">consistency is the key.</p>
-          <div class="carrousel__btns">
-            <button class="carrousel__btn--prev"><ion-icon name="arrow-back"></ion-icon></button>
-            <button class="carrousel__btn--sig"><ion-icon name="arrow-forward"></ion-icon></button>
-          </div>
         </div>
         <div class="carrousel__container--cards">
           <!-- Card 1 -->
@@ -832,7 +829,7 @@ npm run compile:sass -->
                 <div class="form__group">
                   <textarea name="textarea" class="form__input form__textarea" placeholder="Write your comment..."
                     id="textarea" cols="30" rows="10" required></textarea>
-                  <button class="btn btn--blue-green">
+                  <button class="btn btn--blue-green btn-small--phone">
                     <div class="btn--flex">Send email <ion-icon name="arrow-forward"></ion-icon></div>
                   </button>
                 </div>
@@ -855,15 +852,18 @@ npm run compile:sass -->
             <h4 class="footer__title">My Skills</h4>
             <p>Analytical Skills</p>
             <p>Detail-oriented</p>
-            <p>Problem-solving skills</p>
-            <p>Self-motivated</p>
+            <p>Self-Taught</p>
             <p>Teamwork</p>
           </div>
         </div>
         <div class="footer__grid-1-of-2">
           <div class="second">
-            <h4 class="footer__title">React Proyects</h4>
-            <ul class="footer__navigation">
+            <h4 class="footer__title">My Skills</h4>
+            <p>Time Management</p>
+            <p>Adaptability</p>
+            <p>Self-motivated</p>
+            <p>Problem-solving</p>
+            <!--    <ul class="footer__navigation">
               <li><a href="#section-1" id="section--1"><span><ion-icon name="home"></ion-icon></span>Home</a></li>
               <li><a href="#section-2" id="section--2"><span><ion-icon name="star"></ion-icon></span>Experience</a></li>
               <li><a href="#section-3"><span><ion-icon name="briefcase"></ion-icon></span>My
@@ -873,7 +873,7 @@ npm run compile:sass -->
                 <a href="cv.html"><span><ion-icon name="document"></ion-icon></span>My Resume
                 </a>
               </li>
-            </ul>
+            </ul> -->
           </div>
         </div>
         <div class="footer__grid-1-of-2">

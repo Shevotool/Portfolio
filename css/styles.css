@@ -733,7 +733,7 @@ body {
   max-width: 60%; }
 
 .carrousel {
-  max-width: 80%;
+  max-width: 87%;
   margin: 0 auto;
   overflow: hidden; }
   @media (max-width: 75em) {
@@ -742,6 +742,9 @@ body {
   @media (max-width: 56.25em) {
     .carrousel {
       max-width: 75%; } }
+  @media (max-width: 64.25em) {
+    .carrousel {
+      max-width: 80%; } }
   @media (max-width: 44.5em) {
     .carrousel {
       max-width: 80%; } }
@@ -805,13 +808,13 @@ body {
       .card__side--back-2 {
         background-image: linear-gradient(to right bottom, #44403c, #292524); }
       .card__side--back-3 {
-        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+        background-image: linear-gradient(to right bottom, #0ea5e9, #0c8ac5); }
       .card__side--back-4 {
-        background-image: linear-gradient(to right bottom, #e9d5ff, #d8b4fe); }
+        background-image: linear-gradient(to right bottom, #fdf2e9, #f5e5d8); }
       .card__side--back-5 {
-        background-image: linear-gradient(to right bottom, #112240, #0a192f); }
+        background-image: linear-gradient(to right bottom, #5f5c5a, #2b2929); }
       .card__side--back-6 {
-        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+        background-image: linear-gradient(to right bottom, #5f5c5a, #2b2929); }
   .card:hover .card__side--front {
     transform: rotateY(180deg); }
   .card:hover .card__side--back {
@@ -830,13 +833,13 @@ body {
     .card__picture--2 {
       background-image: url(../img/smart-img.webp); }
     .card__picture--3 {
-      background-image: url(../img/budget.webp); }
+      background-image: url(../img/guess-the-flag.webp); }
     .card__picture--4 {
-      background-image: url(../img/smart-img.webp); }
+      background-image: url(../img/omnifood.webp); }
     .card__picture--5 {
-      background-image: url(../img/budget.webp); }
+      background-image: url(../img/coming-soon.webp); }
     .card__picture--6 {
-      background-image: url(../img/smart-img.webp); }
+      background-image: url(../img/coming-soon.webp); }
   .card__details {
     padding: 3rem; }
     .card__details ul {
@@ -871,16 +874,27 @@ body {
     color: #1e293b; }
   .card__price-2 {
     color: #faf4ee; }
+  .card__price-3 {
+    color: #1e293b; }
+  .card__price-4 {
+    color: #1e293b; }
   .card__price-value {
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.7;
     text-align: center;
     margin-bottom: -6rem; }
+    @media (max-width: 39.5em) {
+      .card__price-value {
+        font-size: 1.8rem; } }
   .card__value-1 {
     color: #333; }
   .card__value-2 {
     color: #faf4ee; }
+  .card__value-3 {
+    color: #333; }
+  .card__value-4 {
+    color: #333; }
 
 .content {
   position: relative;
@@ -1268,7 +1282,7 @@ body {
 .functionalities {
   position: fixed;
   top: 20rem;
-  right: 6%;
+  right: 5%;
   z-index: 999; }
   @media (max-width: 44.5em) {
     .functionalities {
@@ -1471,6 +1485,10 @@ body {
 @media (max-width: 56.25em) {
   .experience-left {
     padding-left: 10rem; } }
+
+@media (max-width: 64.25em) {
+  .experience-left {
+    padding-left: 5rem; } }
 
 @media (max-width: 56.25em) {
   .btn--blue-responsive {

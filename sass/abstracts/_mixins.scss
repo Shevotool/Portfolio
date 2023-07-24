@@ -55,6 +55,12 @@ $breakpoint arguement choices:
     }
   }
 
+  @if $breakpoint == tab-small {
+    @media (max-width: 64.25em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == tab-port {
     @media (max-width: 56.25em) {
       @content;

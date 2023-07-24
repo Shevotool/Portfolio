@@ -41,6 +41,10 @@
   @include respond(tab-port) {
     padding-left: 10rem;
   }
+
+  @include respond(tab-small) {
+    padding-left: 5rem;
+  }
 }
 
 .btn--blue-responsive {

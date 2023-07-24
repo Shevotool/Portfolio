@@ -31,6 +31,18 @@ $breakpoint arguement choices:
 */
 
 @mixin respond($breakpoint) {
+  @if $breakpoint == thesmallest-phone {
+    @media (max-width: 20.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == smallest-phone {
+    @media (max-width: 22.5em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == small-phone {
     @media (max-width: 25.5em) {
       @content;

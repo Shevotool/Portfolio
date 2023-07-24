@@ -102,6 +102,14 @@ body {
       font-size: 2.6rem;
       width: 60rem;
     }
+
+    @include respond(smallest-phone) {
+      width: 57rem;
+    }
+
+    @include respond(thesmallest-phone) {
+      width: 55rem;
+    }
   }
 }
 
@@ -155,18 +163,11 @@ body {
 .paragraph2 {
   color: $color-grey-dark-3;
   font-size: $default-font-size;
+  padding: 0 1rem 0 1rem;
 
   @include respond(big-phone) {
-    width: 95%;
+    max-width: 100%;
     font-size: 2.2rem;
-  }
-
-  @include respond(phone) {
-    font-size: 2.6rem;
-  }
-
-  @include respond(small-phone) {
-    font-size: 2.4rem;
   }
 
   &:not(:last-child) {

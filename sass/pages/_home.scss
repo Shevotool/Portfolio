@@ -154,3 +154,17 @@
     display: none;
   }
 }
+
+.react-icon {
+  @include respond(big-phone) {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+.js-icon {
+  @include respond(big-phone) {
+    width: 11px;
+    height: 11px;
+  }
+}

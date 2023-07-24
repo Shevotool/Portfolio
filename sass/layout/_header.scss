@@ -88,7 +88,25 @@
 
     @include respond(smaller-phone) {
       left: 0;
-      margin-left: 4rem;
+      margin-left: 14rem;
+      padding-right: 0;
+    }
+
+    @include respond(small-phone) {
+      left: 0;
+      margin-left: 6rem;
+      padding-right: 0;
+    }
+
+    @include respond(smallest-phone) {
+      left: 0;
+      margin-left: 1rem;
+      padding-right: 0;
+    }
+
+    @include respond(thesmallest-phone) {
+      left: 0;
+      margin-left: 0rem;
       padding-right: 0;
     }
   }

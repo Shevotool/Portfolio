@@ -131,6 +131,12 @@ body {
       .heading-primary--text-p {
         font-size: 2.6rem;
         width: 60rem; } }
+    @media (max-width: 22.5em) {
+      .heading-primary--text-p {
+        width: 57rem; } }
+    @media (max-width: 20.5em) {
+      .heading-primary--text-p {
+        width: 55rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -169,20 +175,13 @@ body {
 .paragraph,
 .paragraph2 {
   color: #333;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  padding: 0 1rem 0 1rem; }
   @media (max-width: 44.5em) {
     .paragraph,
     .paragraph2 {
-      width: 95%;
+      max-width: 100%;
       font-size: 2.2rem; } }
-  @media (max-width: 39.5em) {
-    .paragraph,
-    .paragraph2 {
-      font-size: 2.6rem; } }
-  @media (max-width: 25.5em) {
-    .paragraph,
-    .paragraph2 {
-      font-size: 2.4rem; } }
   .paragraph:not(:last-child),
   .paragraph2:not(:last-child) {
     margin-bottom: 3rem; }
@@ -335,6 +334,16 @@ body {
   @media (max-width: 25.5em) {
     .loader {
       display: none; } }
+
+@media (max-width: 44.5em) {
+  .react-icon {
+    width: 11px;
+    height: 11px; } }
+
+@media (max-width: 44.5em) {
+  .js-icon {
+    width: 11px;
+    height: 11px; } }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -850,6 +859,9 @@ body {
         text-align: center;
         font-size: 1.5rem;
         padding: 1rem; }
+        @media (max-width: 44.5em) {
+          .card__details ul li {
+            font-size: 2.2rem; } }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #eee; }
   .card__cta {
@@ -1227,7 +1239,22 @@ body {
     @media (max-width: 31.5em) {
       .header__text-box {
         left: 0;
-        margin-left: 4rem;
+        margin-left: 14rem;
+        padding-right: 0; } }
+    @media (max-width: 25.5em) {
+      .header__text-box {
+        left: 0;
+        margin-left: 6rem;
+        padding-right: 0; } }
+    @media (max-width: 22.5em) {
+      .header__text-box {
+        left: 0;
+        margin-left: 1rem;
+        padding-right: 0; } }
+    @media (max-width: 20.5em) {
+      .header__text-box {
+        left: 0;
+        margin-left: 0rem;
         padding-right: 0; } }
   .header__flex-box {
     display: flex;

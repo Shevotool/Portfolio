@@ -102,16 +102,16 @@
       &-1 {
         background-image: linear-gradient(
           to right bottom,
-          $color-secondary-light,
-          $color-secondary-dark
+          $color-card-1-light,
+          $color-card-1-dark
         );
       }
 
       &-2 {
         background-image: linear-gradient(
           to right bottom,
-          $color-quartery-light,
-          $color-quartery-dark
+          $color-card-2-light,
+          $color-card-2-dark
         );
       }
 
@@ -272,18 +272,18 @@
   }
 
   &__value-1 {
-    color: $color-grey-dark-3;
+    color: $card-text;
   }
 
   &__value-2 {
-    color: $color-pink;
+    color: $card-text;
   }
 
   &__value-3 {
-    color: $color-grey-dark-3;
+    color: $card-text;
   }
 
   &__value-4 {
-    color: $color-grey-dark-3;
+    color: $card-text;
   }
 }
